@@ -51,10 +51,14 @@ document.addEventListener("DOMContentLoaded", () => {
         description.textContent = product.description;
 
         const addToCart = document.createElement('button');
-        addToCart.classList.add('btn');
-        addToCart.classList.add('btn-success');
-        addToCart.classList.add('float-end');
+        addToCart.classList.add('btn','btn-success','float-end');
         addToCart.textContent = "Add to cart";
+        addToCart.classList.add('addProductBtn');
+
+        addToCart.addEventListener("click", () => {
+            window.location.href = "add-products.html"; // Redirects to the add-product page
+        });
+        
 
         cardBody.appendChild(title);
         cardBody.appendChild(description);
